@@ -1,0 +1,140 @@
+body {
+  font-family: sans-serif;
+  text-align: center;
+  background: #f2f2f2;
+  margin: 0;
+  padding: 20px;
+}
+
+.pack-btn {
+  background: linear-gradient(to bottom, white, #ccc);
+  border: 2px solid #999;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 16px;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.pack-btn:hover {
+  transform: scale(1.05);
+  background: linear-gradient(to bottom, #f9f9f9, #bbb);
+}
+
+.cards {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.card {
+  width: 100px;
+  height: 140px;
+  perspective: 800px;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+}
+
+.card.flipped .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 8px;
+  border: 2px solid #444;
+}
+
+.card-back {
+  background: url('/assets/cardback.png') center/cover;
+}
+
+.card-front {
+  background: white;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 5px;
+}
+
+.card:hover {
+  transform: translateY(0) scale(1.1);
+  z-index: 10;
+}
+
+.card-front, .card-back {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-img {
+  max-width: 80%;
+  max-height: 80px;
+  margin-bottom: 5px;
+}
+
+.card-info {
+  font-size: 12px;
+  text-align: center;
+}
+
+.card-front {
+  border: 3px solid transparent;
+  border-radius: 8px;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.rarity-common {
+  border-color: gray;
+}
+
+.rarity-uncommon {
+  border-color: green;
+  box-shadow: 0 0 8px rgba(0, 128, 0, 0.5);
+}
+
+.rarity-rare {
+  border-color: blue;
+  box-shadow: 0 0 10px rgba(0, 0, 255, 0.5);
+}
+
+.rarity-epic {
+  border-color: purple;
+  box-shadow: 0 0 12px rgba(128, 0, 128, 0.6);
+}
+
+.rarity-legendary {
+  border-color: gold;
+  box-shadow: 0 0 14px rgba(255, 215, 0, 0.8);
+}
+
+.rarity-mythical {
+  border-color: crimson;
+  box-shadow: 0 0 14px rgba(220, 20, 60, 0.8);
+}
