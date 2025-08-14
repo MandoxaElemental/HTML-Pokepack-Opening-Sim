@@ -65,7 +65,7 @@ body {
 }
 
 .card-back {
-  background: url('/assets/cardback.png') center/cover;
+  background: url('/assets/cardback.jpg') center/cover;
 }
 
 .card-front {
@@ -94,18 +94,30 @@ body {
 }
 
 .card-img {
-  max-width: 80%;
+  max-width: 100%;
   max-height: 120px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+  filter: drop-shadow(3px 3px 3px #0000007d);
+}
+
+.card-box {
+  height: 120px;
+  width: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .card-info {
-  font-size: 12px;
+    margin-top: 10px;
+  font-size: 14px;
   text-align: center;
+  color: white;
+  text-shadow: 1.5px 1.5px #0000007e;
 }
 
 .card-front {
-  border: 3px solid transparent;
+  border: 5px solid transparent;
   border-radius: 8px;
   padding: 8px;
   box-sizing: border-box;
@@ -138,4 +150,8 @@ body {
 .rarity-mythical {
   border-color: crimson;
   box-shadow: 0 0 14px rgba(220, 20, 60, 0.8);
+}
+
+.card-rarity{
+    margin-top: 10px;
 }
