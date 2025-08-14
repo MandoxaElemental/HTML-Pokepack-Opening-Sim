@@ -249,6 +249,11 @@ function openPack() {
     cardEl.appendChild(cardInner);
     container.appendChild(cardEl);
 
+    cardEl.addEventListener("click", () => {
+      const audio = new Audio(`https://play.pokemonshowdown.com/audio/cries/${cardData.audio}.mp3`);
+      audio.play();
+    });
+
     setTimeout(() => {
       cardEl.classList.add("show");
       setTimeout(() => {
