@@ -309,11 +309,19 @@ function openPack() {
     const cardBox = document.createElement("div");
     cardBox.className = "card-box";
 
-    const img = document.createElement("img");
-    img.src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${cardData.number}.png`;
-    img.alt = cardData.name;
-    img.className = "card-img";
+        const isShiny = Math.random() < 0.01; 
 
+        const img = document.createElement("img");
+        img.src = isShiny
+        ? `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/${cardData.number}.png`
+        : `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${cardData.number}.png`;
+
+        img.alt = cardData.name + (isShiny ? " (Shiny)" : "");
+        img.className = "card-img" + (isShiny ? " shiny" : "");
+
+        if (isShiny) {
+        img.style.filter = "drop-shadow(0 0 8px gold)";
+        }
     cardBox.appendChild(img);
 
     front.appendChild(cardBox);
