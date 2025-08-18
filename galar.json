@@ -121,7 +121,7 @@
   { "name": "GMax Charizard", "number": 10196, "type": ["Fire", "Flying"], "audio": "charizard", "rarity": "Legendary", "move": "G-Max Wildfire" },
   { "name": "GMax Blastoise", "number": 10197, "type": ["Water"], "audio": "blastoise", "rarity": "Legendary", "move": "G-Max Cannonade" },
   { "name": "GMax Butterfree", "number": 10198, "type": ["Bug", "Flying"], "audio": "butterfree", "rarity": "Legendary", "move": "G-Max Befuddle" },
-  { "name": "GMax Pikachu", "number": 10199, "type": ["Electric"], "audio": "pikachu-sterter", "rarity": "Legendary", "move": "G-Max Volt Crash" },
+  { "name": "GMax Pikachu", "number": 10199, "type": ["Electric"], "audio": "pikachu-starter", "rarity": "Legendary", "move": "G-Max Volt Crash" },
   { "name": "GMax Meowth", "number": 10200, "type": ["Normal"], "audio": "meowth", "rarity": "Legendary", "move": "G-Max Gold Rush" },
   { "name": "GMax Machamp", "number": 10201, "type": ["Fighting"], "audio": "machamp", "rarity": "Legendary", "move": "G-Max Chi Strike" },
   { "name": "GMax Gengar", "number": 10202, "type": ["Ghost", "Poison"], "audio": "gengar", "rarity": "Legendary", "move": "G-Max Terror" },

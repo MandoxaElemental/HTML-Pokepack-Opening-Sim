@@ -32,6 +32,12 @@ document.getElementById("galarBtn").addEventListener("click", function() {
 document.getElementById("alolaBtn").addEventListener("click", function() {
   loadSet("alola", this);
 });
+document.getElementById("pikachuBtn").addEventListener("click", function() {
+  loadSet("pikachu", this);
+});
+document.getElementById("megaBtn").addEventListener("click", function() {
+  loadSet("mega", this);
+});
 
 const typeColors = {
   Normal: '#c1c2c1',
@@ -63,9 +69,10 @@ const defaultRarityWeights = {
   Mythical: 3,
 };
 
-function getRarityIcon(rarity) {
+function getRarityIcon(rarity, name) {
   const diamondIconPath = '/assets/diamond.png';
   const starIconPath = '/assets/star.png';
+  const megaIconPath = '/assets/shiny.png';
   const crownIconPath = '/assets/crown.png';
 
   function renderRepeatedImage(src, count) {
@@ -83,6 +90,15 @@ function getRarityIcon(rarity) {
       span.appendChild(img);
     }
     return span;
+  }
+
+  if (name.includes("Mega ") || name.includes("Primal")) {
+    const img = document.createElement("img");
+    img.src = megaIconPath;
+    img.alt = "Mega/Primal";
+    img.width = 18;
+    img.height = 18;
+    return img;
   }
 
   switch (rarity) {
@@ -145,7 +161,7 @@ function openPack() {
 
     const front = document.createElement("div");
     front.className = "card-front";
-    front.classList.add(`rarity-${cardData.rarity.toLowerCase()}`);
+    front.classList.add((cardData.name.includes("Mega ") || cardData.name.includes("Primal")) ? front.classList.add("rarity-prismatic") : `rarity-${cardData.rarity.toLowerCase()}`);
 
     if (cardData.name === 'Zekrom'){
         front.style.background = `url('/assets/white.jpg') center/cover`;
@@ -165,6 +181,8 @@ function openPack() {
         front.style.background = `url('/assets/wormholeradiance.jpg') center/cover`;
     } else if (cardData.name === 'Dawn Wings Necrozma'){
         front.style.background = `url('/assets/wormholeumbra.jpg') center/cover`;
+    } else if (cardData.name.includes("Mega ") || cardData.name.includes("Primal")){
+        front.style.background = `url('/assets/mega.png') center/cover`;
     } else if (cardData.name.includes("Zacian")){
         front.style.background = `url('/assets/Sword.jpg') center/cover`;
     } else if (cardData.name.includes("Zamazenta")){
@@ -195,8 +213,40 @@ function openPack() {
     img.className = "card-img" + (isShiny ? " shiny" : "");
 
     if (isShiny) {
-    img.style.filter = "drop-shadow(0 0 8px gold)";
+    img.style.filter = "drop-shadow(0 0 8px white)";
     }
+
+if (cardData.name.includes("Mega ") || cardData.name.includes("Primal")) {
+  const moveText = document.createElement("div");
+  moveText.className = "move-text";
+
+  const moveColor = (cardData.moveType && typeColors[cardData.moveType]) || "#fff";
+
+  const characters = cardData.move.split("");
+
+  const tspans = characters
+    .map((char, index) => {
+      const scale = (cardData.move.length > 10 ? 0.6 : cardData.move === "Precipice Blades" ? 0.4 : 1) + index * 0.05;
+      return `<tspan style="font-size: ${scale}em;">${char}</tspan>`;
+    })
+    .join("");
+
+  moveText.innerHTML = `
+    <svg viewBox="0 0 500 120" preserveAspectRatio="xMidYMid meet">
+      <defs>
+        <path id="curvePath" d="M 50 100 Q 250 10 450 100" />
+      </defs>
+      <text fill="${moveColor}">
+        <textPath href="#curvePath" startOffset="50%" text-anchor="middle" >
+          ${tspans}
+        </textPath>
+      </text>
+    </svg>
+  `;
+
+  front.appendChild(moveText);
+}
+
 
     cardBox.appendChild(img);
 
@@ -214,7 +264,7 @@ function openPack() {
 
       const rarityEl = document.createElement("div");
         rarityEl.className = "card-rarity";
-        rarityEl.appendChild(getRarityIcon(cardData.rarity));
+        rarityEl.appendChild(getRarityIcon(cardData.rarity, cardData.name));
 
   front.appendChild(rarityEl);
 

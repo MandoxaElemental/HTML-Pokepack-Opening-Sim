@@ -1,0 +1,21 @@
+[
+    { "name": "Pikachu", "number": 25, "type": ["Electric"], "audio": "pikachu", "rarity": "Uncommon", "move": "Volt Tackle" },
+    { "name": "Pichu", "number": 172, "type": ["Electric"], "audio": "pichu", "rarity": "Common", "move": "Thunder Shock" },
+    { "name": "Pikachu Rock Star", "number": 10080, "type": ["Electric"], "audio": "pikachu-starter", "rarity": "Rare", "move": "Meteor Mash" },
+    { "name": "Pikachu Belle", "number": 10081, "type": ["Electric"], "audio": "pikachu-starter", "rarity": "Rare", "move": "Icicle Crash" },
+    { "name": "Pikachu Pop Star", "number": 10082, "type": ["Electric"], "audio": "pikachu-starter", "rarity": "Rare", "move": "Draining Kiss" },
+    { "name": "Pikachu Ph.D.", "number": 10083, "type": ["Electric"], "audio": "pikachu-starter", "rarity": "Rare", "move": "Electric Terrain" },
+    { "name": "Pikachu Libre", "number": 10084, "type": ["Electric"], "audio": "pikachu-starter", "rarity": "Rare", "move": "Flying Press" },
+    { "name": "Detective Pikachu", "number": 10085, "type": ["Electric"], "audio": "pikachu-starter", "rarity": "Rare", "move": "Volt Tackle" },
+    { "name": "Original Cap Pikachu", "number": 10094, "type": ["Electric"], "audio": "pikachu-starter", "rarity": "Rare", "move": "Volt Tackle" },
+    { "name": "Hoenn Cap Pikachu", "number": 10095, "type": ["Electric"], "audio": "pikachu-starter", "rarity": "Rare", "move": "Volt Tackle" },
+    { "name": "Sinnoh Cap Pikachu", "number": 10096, "type": ["Electric"], "audio": "pikachu-starter", "rarity": "Rare", "move": "Volt Tackle" },
+    { "name": "Unova Cap Pikachu", "number": 10097, "type": ["Electric"], "audio": "pikachu-starter", "rarity": "Rare", "move": "Volt Tackle" },
+    { "name": "Kalos Cap Pikachu", "number": 10098, "type": ["Electric"], "audio": "pikachu-starter", "rarity": "Rare", "move": "Volt Tackle" },
+    { "name": "Alola Cap Pikachu", "number": 10099, "type": ["Electric"], "audio": "pikachu-starter", "rarity": "Rare", "move": "Volt Tackle" },
+    { "name": "Starter Cap Pikachu", "number": 10148, "type": ["Electric"], "audio": "pikachu-starter", "rarity": "Rare", "move": "Volt Tackle" },
+    { "name": "World Cap Pikachu", "number": 10160, "type": ["Electric"], "audio": "pikachu-starter", "rarity": "Rare", "move": "Volt Tackle" },
+    { "name": "GMax Pikachu", "number": 10199, "type": ["Electric"], "audio": "pikachu", "rarity": "Legendary", "move": "GMax Volt Tackle" },
+    { "name": "Raichu", "number": 26, "type": ["Electric"], "audio": "raichu", "rarity": "Rare", "move": "Thunder" },
+    { "name": "Raichu (Alola)", "number": 10100, "variant": "Alola", "type": ["Electric", "Psychic"], "audio": "raichu", "rarity": "Rare", "move": "Psychic" }
+]
