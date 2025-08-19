@@ -1,7 +1,7 @@
 [  { "name": "Bulbasaur", "number": 1, "type": ["Grass", "Poison"], "audio": "bulbasaur", "rarity": "Uncommon", "move": "Vine Whip" },
   { "name": "Ivysaur", "number": 2, "type": ["Grass", "Poison"], "audio": "ivysaur", "rarity": "Rare", "move": "Razor Leaf" },
   { "name": "Venusaur", "number": 3, "type": ["Grass", "Poison"], "audio": "venusaur", "rarity": "Epic", "move": "Solar Beam" },
-  { "name": "Charmander", "number": 4, "type": ["Fire"], "audio": "charamander", "rarity": "Uncommon", "move": "Ember" },
+  { "name": "Charmander", "number": 4, "type": ["Fire"], "audio": "charmander", "rarity": "Uncommon", "move": "Ember" },
   { "name": "Charmeleon", "number": 5, "type": ["Fire"], "audio": "charmeleon", "rarity": "Rare", "move": "Flamethrower" },
   { "name": "Charizard", "number": 6, "type": ["Fire", "Flying"], "audio": "charizard", "rarity": "Epic", "move": "Fire Blast" },
   { "name": "Squirtle", "number": 7, "type": ["Water"], "audio": "squirtle", "rarity": "Uncommon", "move": "Water Gun" },

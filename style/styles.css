@@ -51,6 +51,13 @@ body {
   transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
+.border{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px
+}
+
 .card.show {
   opacity: 1;
   transform: translateY(0);
@@ -231,8 +238,7 @@ body {
     text-shadow: 
     1px 1px 0 #000,
     2px 2px 0 white,
-    3px 3px 0 #000,
-    0 3px 10px black;
+    3px 3px 0 #000;
 }
 
 .move-text svg {
