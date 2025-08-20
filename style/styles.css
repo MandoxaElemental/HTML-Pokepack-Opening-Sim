@@ -241,10 +241,27 @@ body {
     3px 3px 0 #000;
 }
 
+.move-gmax {
+  border: black;
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 95%;
+  height: 90px;
+  pointer-events: none;
+  z-index: 10;
+  animation: popout 0.8s ease forwards;
+    text-shadow: 
+    1px 1px 0 #000,
+    2px 2px 0 #e40140,
+    3px 3px 0 #000;
+}
+
 .move-text svg {
   width: 100%;
   height: 100%;
-  rotate: 5deg;
+  rotate: -5deg;
 }
 
 .move-text text {
@@ -272,3 +289,25 @@ body {
   }
 }
 
+
+.twinkle-shiny img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+
+.twinkle-shiny span {
+  position: absolute;
+  color: rgba(255, 255, 255, 0.8);
+  font-family: Arial, sans-serif;
+  opacity: 0;
+  z-index: 10;
+  animation: twinkle 2.5s infinite ease-in-out;
+}
+
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0; transform: scale(0.5); }
+  50% { opacity: 1; transform: scale(1.2); }
+}

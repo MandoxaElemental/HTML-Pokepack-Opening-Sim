@@ -32,32 +32,33 @@ document.getElementById("galarBtn").addEventListener("click", function() {
 document.getElementById("alolaBtn").addEventListener("click", function() {
   loadSet("alola", this);
 });
-document.getElementById("pikachuBtn").addEventListener("click", function() {
-  loadSet("pikachu", this);
-});
+// document.getElementById("pikachuBtn").addEventListener("click", function() {
+//   loadSet("pikachu", this);
+// });
 document.getElementById("megaBtn").addEventListener("click", function() {
   loadSet("mega", this);
 });
 
 const typeColors = {
-  Normal: '#c1c2c1',
-  Fighting: '#ffac58',
-  Flying: '#acd2f4',
+  Normal: '#9fa0a1',
+  Fighting: '#fd8101',
+  Flying: '#81b9ef',
   Poison: '#b885dc',
-  Ground: '#b98e6e',
-  Rock: '#cac6ae',
-  Bug: '#b8c36b',
-  Ghost: '#a384a2',
-  Steel: '#98c2d2',
-  Fire: '#ee7375',
-  Water: '#74acf6',
-  Grass: '#82c375',
-  Electric: '#fdd75a',
-  Psychic: '#f584a8',
-  Ice: '#81dff7',
-  Dragon: '#8f99ec',
-  Dark: '#9b8a8c',
-  Fairy: '#f4a3f5'
+  Ground: '#915020',
+  Rock: '#aea980',
+  Bug: '#92a21a',
+  Ghost: '#714371',
+  Steel: '#5e92a5',
+  Fire: '#e62928',
+  Water: '#2981f0',
+  Grass: '#40a328',
+  Electric: '#fac100',
+  Psychic: '#ef417a',
+  Ice: '#3fcef3',
+  Dragon: '#5160e2',
+  Dark: '#624f4f',
+  Fairy: '#ef70ee',
+  Stellar: '#41b5a4',
 };
 
 const defaultRarityWeights = {
@@ -85,19 +86,19 @@ function getRarityIcon(rarity, name) {
       const img = document.createElement("img");
       img.src = src;
       img.alt = "rarity";
-      img.width = 15;
-      img.height = 15;
+      img.width = 12;
+      img.height = 12;
       span.appendChild(img);
     }
     return span;
   }
 
-  if (name.includes("Mega ") || name.includes("Primal")) {
+  if (name.includes("Mega ") || name.includes("Primal") || name.includes("GMax ") || name.includes("Eternamax")) {
     const img = document.createElement("img");
     img.src = megaIconPath;
-    img.alt = "Mega/Primal";
-    img.width = 18;
-    img.height = 18;
+    img.alt = "rarity";
+    img.width = 12;
+    img.height = 12;
     return img;
   }
 
@@ -161,7 +162,7 @@ function openPack() {
 
     const front = document.createElement("div");
     front.className = "card-front";
-    front.classList.add((cardData.name.includes("Mega ") || cardData.name.includes("Primal")) ? front.classList.add("rarity-prismatic") : `rarity-${cardData.rarity.toLowerCase()}`);
+    front.classList.add((cardData.name.includes("Mega ") || cardData.name.includes("Primal") || cardData.name.includes("GMax ") || cardData.name.includes("Eternamax")) ? front.classList.add("rarity-prismatic") : `rarity-${cardData.rarity.toLowerCase()}`);
 
     if (cardData.name === 'Zekrom'){
         front.style.background = `url('/assets/white.jpg') center/cover`;
@@ -184,37 +185,62 @@ function openPack() {
     } else if (cardData.name.includes("Mega ") || cardData.name.includes("Primal")){
         front.style.background = `url('/assets/mega.png') center/cover`;
     } else if (cardData.name.includes("Zacian")){
-        front.style.background = `url('/assets/Sword.jpg') center/cover`;
+        front.style.background = `url('/assets/Sword.png') center/cover`;
     } else if (cardData.name.includes("Zamazenta")){
-        front.style.background = `url('/assets/Shield.jpg') center/cover`;
+        front.style.background = `url('/assets/Shield.png') center/cover`;
     } else if (cardData.name.includes("Eternatus") || cardData.name.includes("GMax")){
         front.style.background = `url('/assets/GMax.jpg') center/cover`;
     } else if (cardData.name.includes("Urshifu") || cardData.name === "Kubfu"){
         front.style.background = `url('/assets/Urshifu.jpg') center/cover`;
-    } else if (cardData.type && cardData.type.length > 1) {
-    const color1 = typeColors[cardData.type[0]];
-    const color2 = typeColors[cardData.type[1]];
-    front.style.background = `linear-gradient(135deg, ${color1}, ${color2})`;
-    } else if (cardData.type && cardData.type.length === 1) {
-    front.style.background = typeColors[cardData.type[0]];
+    } else {
+      front.style.background = `url('/assets/background/${cardData.type[0]}.png') center/cover`;
     }
 
     const cardBox = document.createElement("div");
     cardBox.className = "card-box";
 
-    const isShiny = Math.random() < 0.05; 
+    const isShiny = Math.random() < 0.05;
 
     const img = document.createElement("img");
     img.src = isShiny
-    ? `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/${cardData.number}.png`
-    : `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${cardData.number}.png`;
+      ? `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/${cardData.number}.png`
+      : `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/${cardData.number}.png`;
 
     img.alt = cardData.name + (isShiny ? " (Shiny)" : "");
     img.className = "card-img" + (isShiny ? " shiny" : "");
 
     if (isShiny) {
-    img.style.filter = "drop-shadow(0 0 8px white)";
-    }
+  img.style.filter = "drop-shadow(0 0 8px white)";
+
+  const twinkleWrapper = document.createElement("div");
+  twinkleWrapper.className = "twinkle-shiny";
+  twinkleWrapper.appendChild(img);
+
+  const starCount = 10;
+for (let s = 0; s < starCount; s++) {
+  const span = document.createElement("span");
+  span.textContent = "✦";
+
+  const top = Math.random() * 85 + 5;
+  const left = Math.random() * 85 + 5;
+
+  const size = (Math.random() * 0.7 + 0.8).toFixed(2);
+
+  const delay = (Math.random() * 2.5).toFixed(2);
+
+  span.style.top = `${top}%`;
+  span.style.left = `${left}%`;
+  span.style.fontSize = `${size}rem`;
+  span.style.animationDelay = `${delay}s`;
+
+  twinkleWrapper.appendChild(span);
+}
+
+  cardBox.appendChild(twinkleWrapper);
+} else {
+  cardBox.appendChild(img);
+}
+
 
 if (cardData.name.includes("Mega ") || cardData.name.includes("Primal")) {
   const moveText = document.createElement("div");
@@ -226,7 +252,7 @@ if (cardData.name.includes("Mega ") || cardData.name.includes("Primal")) {
 
   const tspans = characters
     .map((char, index) => {
-      const scale = (cardData.move.length > 10 ? 0.6 : cardData.move === "Precipice Blades" ? 0.4 : 1) + index * 0.05;
+      const scale = (cardData.move.length > 10 ? 0.6 : cardData.move === "Precipice Blades" ? 0.1 : 1) + index * (cardData.move === "Precipice Blades" ? 0.03 : 0.05);
       return `<tspan style="font-size: ${scale}em;">${char}</tspan>`;
     })
     .join("");
@@ -246,6 +272,41 @@ if (cardData.name.includes("Mega ") || cardData.name.includes("Primal")) {
 
   front.appendChild(moveText);
 }
+
+if (cardData.name.includes("GMax ") || cardData.name.includes("Eternamax")) {
+  const moveText = document.createElement("div");
+  moveText.className = "move-text";
+
+  const moveColor = (cardData.moveType && typeColors[cardData.moveType]) || "#fff";
+
+  const characters = cardData.move.split("");
+  const len = characters.length;
+
+  const tspans = characters
+    .map((char, index) => {
+      const dist = Math.abs(index - (len - 1) / 2) / ((len - 1) / 2);
+      const scale = 0.5 + dist * 0.5;
+
+      return `<tspan style="font-size: ${scale}em;">${char}</tspan>`;
+    })
+    .join("");
+
+  moveText.innerHTML = `
+    <svg viewBox="0 0 500 120" preserveAspectRatio="xMidYMid meet">
+      <defs>
+        <path id="curvePath" d="M 50 100 Q 250 10 450 100" />
+      </defs>
+      <text fill="${moveColor}">
+        <textPath href="#curvePath" startOffset="50%" text-anchor="middle">
+          ${tspans}
+        </textPath>
+      </text>
+    </svg>
+  `;
+
+  front.appendChild(moveText);
+}
+
 
 
     cardBox.appendChild(img);

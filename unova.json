@@ -52,7 +52,7 @@
   { "name": "Whirlipede", "number": 544, "type": ["Bug", "Poison"], "audio": "whirliplede", "rarity": "Uncommon", "move": "Rollout" },
   { "name": "Scolipede", "number": 545, "type": ["Bug", "Poison"], "audio": "scolipede", "rarity": "Rare", "move": "Poison Tail" },
   { "name": "Cottonee", "number": 546, "type": ["Grass", "Fairy"], "audio": "cottonee", "rarity": "Common", "move": "Absorb" },
-  { "name": "Whimsicott", "number": 547, "type": ["Grass", "Fairy"], "audio": "whimsicott", "rarity": "Uncommon", "move": "Hurricane" },
+  { "name": "Whimsicott", "number": 547, "type": ["Grass", "Fairy"], "audio": "whimsicott", "rarity": "Uncommon", "move": "Dazzling Gleam" },
   { "name": "Petilil", "number": 548, "type": ["Grass"], "audio": "petilil", "rarity": "Common", "move": "Mega Drain" },
   { "name": "Lilligant", "number": 549, "type": ["Grass"], "audio": "lilligant", "rarity": "Uncommon", "move": "Petal Dance" },
   { "name": "Basculin (Red-Stripe)", "number": 550, "type": ["Water"], "audio": "basculin", "rarity": "Uncommon", "move": "Aqua Jet" },
