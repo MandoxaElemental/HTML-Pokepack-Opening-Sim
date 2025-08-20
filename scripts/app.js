@@ -204,78 +204,6 @@ function openPack() {
         : `rarity-${cardData.rarity.toLowerCase()}`
     );
 
-    if (cardData.name === "Zekrom") {
-      front.style.background = `url('/assets/white.jpg') center/cover`;
-    } else if (cardData.name === "Reshiram") {
-      front.style.background = `url('/assets/black.jpg') center/cover`;
-    } else if (
-      cardData.name === "Kyurem" ||
-      cardData.name === "Kyurem (White)" ||
-      cardData.name === "Kyurem (Black)"
-    ) {
-      front.style.background = `url('/assets/b2w2.jpg') center/cover`;
-    } else if (
-      cardData.name === "Tornadus" ||
-      cardData.name === "Tornadus (Therian)" ||
-      cardData.name === "Thundurus" ||
-      cardData.name === "Thundurus (Therian)" ||
-      cardData.name === "Landorus" ||
-      cardData.name === "Landorus (Therian)" ||
-      cardData.name === "Terrakion" ||
-      cardData.name === "Virizion" ||
-      cardData.name === "Cobalion" ||
-      cardData.name === "Victini" ||
-      cardData.name === "Meloetta" ||
-      cardData.name === "Meloetta (Pirouette)" ||
-      cardData.name === "Keldeo" ||
-      cardData.name === "Keldeo (Resolute)" ||
-      cardData.name === "Genesect"
-    ) {
-      front.style.background = `url('/assets/bw.jpg') center/cover`;
-    } else if (cardData.name === "Solgaleo" || cardData.name === "Elio") {
-      front.style.background = `url('/assets/radiance.jpg') center/cover`;
-    } else if (cardData.name === "Lunala" || cardData.name === "Selene") {
-      front.style.background = `url('/assets/umbra.jpg') center/cover`;
-    } else if (
-      cardData.name === "Nihilego" ||
-      cardData.name === "Buzzwole" ||
-      cardData.name === "Pheromosa" ||
-      cardData.name === "Xurkitree" ||
-      cardData.name === "Celesteela" ||
-      cardData.name === "Kartana" ||
-      cardData.name === "Guzzlord" ||
-      cardData.name === "Poipole" ||
-      cardData.name === "Naganadel" ||
-      cardData.name === "Stakataka" ||
-      cardData.name === "Blacephalon" ||
-      cardData.name === "Necrozma" ||
-      cardData.name === "Ultra Necrozma"
-    ) {
-      front.style.background = `url('/assets/ultra.jpg') center/cover`;
-    } else if (cardData.name === "Dusk Mane Necrozma" || cardData.name === "Elio (US)") {
-      front.style.background = `url('/assets/wormholeradiance.jpg') center/cover`;
-    } else if (cardData.name === "Dawn Wings Necrozma" || cardData.name === "Selene (UM)") {
-      front.style.background = `url('/assets/wormholeumbra.jpg') center/cover`;
-    } else if (
-      cardData.name.includes("Mega ") ||
-      cardData.name.includes("Primal")
-    ) {
-      front.style.background = `url('/assets/mega.png') center/cover`;
-    } else if (cardData.name.includes("Zacian")) {
-      front.style.background = `url('/assets/Sword.png') center/cover`;
-    } else if (cardData.name.includes("Zamazenta")) {
-      front.style.background = `url('/assets/Shield.png') center/cover`;
-    } else if (
-      cardData.name.includes("Eternatus") ||
-      cardData.name.includes("GMax")
-    ) {
-      front.style.background = `url('/assets/GMax.jpg') center/cover`;
-    } else if (cardData.name.includes("Urshifu") || cardData.name === "Kubfu") {
-      front.style.background = `url('/assets/Urshifu.jpg') center/cover`;
-    } else {
-      front.style.background = `url('/assets/background/${cardData.type[0]}.png') center/cover`;
-    }
-
     const cardBox = document.createElement("div");
     cardBox.className = "card-box";
 
@@ -283,15 +211,15 @@ function openPack() {
 
     const img = document.createElement("img");
 
-    if (cardData.Trainer === true){
-      img.src = `https://archives.bulbagarden.net/media/upload/${cardData.imgPath}.png`
+    if (cardData.Trainer === true) {
+      img.src = `https://archives.bulbagarden.net/media/upload/${cardData.imgPath}.png`;
       img.alt = cardData.name;
       img.className = "card-img-trainer";
-    }else{
+    } else {
       img.src = isShiny
         ? `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/${cardData.number}.png`
         : `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/${cardData.number}.png`;
-  
+
       img.alt = cardData.name + (isShiny ? " (Shiny)" : "");
       img.className = "card-img" + (isShiny ? " shiny" : "");
     }
@@ -326,6 +254,90 @@ function openPack() {
       cardBox.appendChild(twinkleWrapper);
     } else {
       cardBox.appendChild(img);
+    }
+
+    if (isShiny) {
+      front.style.background = `url('/assets/background/shiny.jpg') center/cover`;
+    } else if (cardData.name === "Zekrom" || cardData.name === "Nate (Neo-Champion)") {
+      front.style.background = `url('/assets/white.jpg') center/cover`;
+    } else if (cardData.name === "Reshiram" || cardData.name === "Rosa (Neo-Champion)") {
+      front.style.background = `url('/assets/black.jpg') center/cover`;
+    } else if (
+      cardData.name === "Kyurem" ||
+      cardData.name === "Kyurem (White)" ||
+      cardData.name === "Kyurem (Black)" ||
+      cardData.name === "Ghetsis"
+    ) {
+      front.style.background = `url('/assets/b2w2.jpg') center/cover`;
+    } else if (
+      cardData.name === "Tornadus" ||
+      cardData.name === "Tornadus (Therian)" ||
+      cardData.name === "Thundurus" ||
+      cardData.name === "Thundurus (Therian)" ||
+      cardData.name === "Landorus" ||
+      cardData.name === "Landorus (Therian)" ||
+      cardData.name === "Terrakion" ||
+      cardData.name === "Virizion" ||
+      cardData.name === "Cobalion" ||
+      cardData.name === "Victini" ||
+      cardData.name === "Meloetta" ||
+      cardData.name === "Meloetta (Pirouette)" ||
+      cardData.name === "Keldeo" ||
+      cardData.name === "Keldeo (Resolute)" ||
+      cardData.name === "Genesect" ||
+      cardData.name === "N"
+    ) {
+      front.style.background = `url('/assets/bw.jpg') center/cover`;
+    } else if (cardData.name === "Solgaleo" || cardData.name === "Elio") {
+      front.style.background = `url('/assets/radiance.jpg') center/cover`;
+    } else if (cardData.name === "Lunala" || cardData.name === "Selene") {
+      front.style.background = `url('/assets/umbra.jpg') center/cover`;
+    } else if (
+      cardData.name === "Nihilego" ||
+      cardData.name === "Buzzwole" ||
+      cardData.name === "Pheromosa" ||
+      cardData.name === "Xurkitree" ||
+      cardData.name === "Celesteela" ||
+      cardData.name === "Kartana" ||
+      cardData.name === "Guzzlord" ||
+      cardData.name === "Poipole" ||
+      cardData.name === "Naganadel" ||
+      cardData.name === "Stakataka" ||
+      cardData.name === "Blacephalon" ||
+      cardData.name === "Necrozma" ||
+      cardData.name === "Ultra Necrozma"
+    ) {
+      front.style.background = `url('/assets/ultra.jpg') center/cover`;
+    } else if (
+      cardData.name === "Dusk Mane Necrozma" ||
+      cardData.name === "Elio (US)" ||
+      cardData.name === "Elio (Neo-Champion)"
+    ) {
+      front.style.background = `url('/assets/wormholeradiance.jpg') center/cover`;
+    } else if (
+      cardData.name === "Dawn Wings Necrozma" ||
+      cardData.name === "Selene (UM)" ||
+      cardData.name === "Selene (Neo-Champion)"
+    ) {
+      front.style.background = `url('/assets/wormholeumbra.jpg') center/cover`;
+    } else if (
+      cardData.name.includes("Mega ") ||
+      cardData.name.includes("Primal")
+    ) {
+      front.style.background = `url('/assets/mega.png') center/cover`;
+    } else if (cardData.name.includes("Zacian")) {
+      front.style.background = `url('/assets/Sword.png') center/cover`;
+    } else if (cardData.name.includes("Zamazenta")) {
+      front.style.background = `url('/assets/Shield.png') center/cover`;
+    } else if (
+      cardData.name.includes("Eternatus") ||
+      cardData.name.includes("GMax")
+    ) {
+      front.style.background = `url('/assets/GMax.jpg') center/cover`;
+    } else if (cardData.name.includes("Urshifu") || cardData.name === "Kubfu") {
+      front.style.background = `url('/assets/Urshifu.jpg') center/cover`;
+    } else {
+      front.style.background = `url('/assets/background/${cardData.type[0]}.png') center/cover`;
     }
 
     if (cardData.name.includes("Mega ") || cardData.name.includes("Primal")) {
