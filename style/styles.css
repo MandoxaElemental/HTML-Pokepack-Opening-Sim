@@ -115,7 +115,15 @@ body {
 
 .card-img {
   max-width: 100%;
-  max-height: 150px;
+  height: 140px;
+  margin-bottom: 10px;
+  filter: drop-shadow(3px 3px 3px #0000007d);
+}
+.card-img-trainer {
+  width: 120px;
+  height: 180px;
+  object-fit: cover;
+  object-position: center;
   margin-bottom: 10px;
   filter: drop-shadow(3px 3px 3px #0000007d);
 }
@@ -129,7 +137,8 @@ body {
 }
 
 .card-info {
-    margin-top: 10px;
+  margin-top: 10px;
+  margin-bottom: 20px;
   font-size: 14px;
   text-align: center;
   color: white;
@@ -173,7 +182,19 @@ body {
 }
 
 .card-rarity{
-    margin-top: 10px;
+    position: absolute;
+    left: 5%;
+    bottom: 2%;
+}
+.card-set{
+    position: absolute;
+    left: 5%;
+    top: 3%;
+}
+.card-type{
+    position: absolute;
+    right: 5%;
+    top: 3%;
 }
 .rarity-prismatic {
   position: relative;
