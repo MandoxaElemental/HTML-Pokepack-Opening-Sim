@@ -104,12 +104,14 @@ function getRarityIcon(rarity, name) {
     name.includes("Eternamax") ||
     name.includes("Stellar")
   ) {
-    const img = document.createElement("img");
-    img.src = megaIconPath;
-    img.alt = "rarity";
-    img.width = 12;
-    img.height = 12;
-    return img;
+      switch (rarity) {
+    case "Legendary":
+      return renderRepeatedImage(megaIconPath, 1);
+    case "Mythical":
+      return renderRepeatedImage(megaIconPath, 2);
+    default:
+      return document.createTextNode("");
+  }
   }
 
   switch (rarity) {
@@ -212,9 +214,13 @@ function openPack() {
     const img = document.createElement("img");
 
     if (cardData.Trainer === true) {
-      img.src = `https://archives.bulbagarden.net/media/upload/${cardData.imgPath}.png`;
+      img.src = `https://www.serebii.net/pokemonmasters/syncpairs/${cardData.imgPath}.png`;
       img.alt = cardData.name;
       img.className = "card-img-trainer";
+    } else if (cardData.Unavailable === true) {
+      img.src = `https://archives.bulbagarden.net/media/upload/${cardData.imgPath}.png`;
+      img.alt = cardData.name;
+      img.className = "card-img";
     } else {
       img.src = isShiny
         ? `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/${cardData.number}.png`
@@ -336,6 +342,14 @@ function openPack() {
       front.style.background = `url('/assets/GMax.jpg') center/cover`;
     } else if (cardData.name.includes("Urshifu") || cardData.name === "Kubfu") {
       front.style.background = `url('/assets/Urshifu.jpg') center/cover`;
+    } else if (cardData.name === "Wo-Chien") {
+      front.style.background = `url('/assets/Grasswither.jpg') center/cover`;
+    } else if (cardData.name ===  "Chien-Pao") {
+      front.style.background = `url('/assets/Icerend.jpg') center/cover`;
+    } else if (cardData.name === "Ting-Lu") {
+      front.style.background = `url('/assets/Groundblight.jpg') center/cover`;
+    } else if (cardData.name === "Chi-Yu") {
+      front.style.background = `url('/assets/Firescourge.jpg') center/cover`;
     } else {
       front.style.background = `url('/assets/background/${cardData.type[0]}.png') center/cover`;
     }

@@ -149,6 +149,26 @@
   { "name": "GMax Copperajah", "number": 10224, "type": ["Steel"], "audio": "copperajah", "rarity": "Legendary", "moveType": "Steel", "move": "G-Max Steelsurge" },
   { "name": "GMax Duraludon", "number": 10225, "type": ["Steel", "Dragon"], "audio": "duraludon", "rarity": "Legendary", "moveType": "Dragon", "move": "G-Max Depletion" },
   { "name": "GMax Urshifu (Single Strike)", "number": 10226, "type": ["Fighting", "Dark"], "audio": "urshifu", "rarity": "Mythical", "moveType": "Dark", "move": "G-Max One Blow" },
-  { "name": "GMax Urshifu (Rapid Strike)", "number": 10227, "type": ["Fighting", "Water"], "audio": "urshifu-rapidstrike", "rarity": "Mythical", "moveType": "Water", "move": "G-Max Rapid Flow" }
+  { "name": "GMax Urshifu (Rapid Strike)", "number": 10227, "type": ["Fighting", "Water"], "audio": "urshifu-rapidstrike", "rarity": "Mythical", "moveType": "Water", "move": "G-Max Rapid Flow" },
 
+  { "name": "Victor", "type": ["Grass"], "rarity": "Rare", "Trainer": true, "imgPath": "victor" },
+  { "name": "Gloria", "type": ["Fire"], "rarity": "Rare", "Trainer": true, "imgPath": "gloria" },
+  { "name": "Hop", "type": ["Normal"], "rarity": "Rare", "Trainer": true, "imgPath": "hop" },
+  { "name": "Bede", "type": ["Fairy"], "rarity": "Rare", "Trainer": true, "imgPath": "bede" },
+  { "name": "Marnie", "type": ["Dark"], "rarity": "Rare", "Trainer": true, "imgPath": "marnie" },
+  { "name": "Sonia", "type": ["Electric"], "rarity": "Rare", "Trainer": true, "imgPath": "sonia" },
+  { "name": "Milo", "type": ["Grass"], "rarity": "Rare", "Trainer": true, "imgPath": "milo" },
+  { "name": "Nessa", "type": ["Water"], "rarity": "Rare", "Trainer": true, "imgPath": "nessa" },
+  { "name": "Kabu", "type": ["Fire"], "rarity": "Rare", "Trainer": true, "imgPath": "kabu" },
+  { "name": "Bea", "type": ["Fighting"], "rarity": "Rare", "Trainer": true, "imgPath": "bea" },
+  { "name": "Allister", "type": ["Ghost"], "rarity": "Rare", "Trainer": true, "imgPath": "allister" },
+  { "name": "Gordie", "type": ["Rock"], "rarity": "Rare", "Trainer": true, "imgPath": "gordie" },
+  { "name": "Melony", "type": ["Ice"], "rarity": "Rare", "Trainer": true, "imgPath": "melony" },
+  { "name": "Piers", "type": ["Dark"], "rarity": "Rare", "Trainer": true, "imgPath": "piers" },
+  { "name": "Raihan", "type": ["Dragon"], "rarity": "Rare", "Trainer": true, "imgPath": "raihan" },
+  { "name": "Leon", "type": ["Fire"], "rarity": "Epic", "Trainer": true, "imgPath": "leon" },
+  { "name": "Rose", "type": ["Steel"], "rarity": "Epic", "Trainer": true, "imgPath": "rose" },
+  { "name": "Oleana", "type": ["Poison"], "rarity": "Rare", "Trainer": true, "imgPath": "oleana" },
+  { "name": "Klara", "type": ["Poison"], "rarity": "Rare", "Trainer": true, "imgPath": "klara" },
+  { "name": "Avery", "type": ["Psychic"], "rarity": "Rare", "Trainer": true, "imgPath": "avery" }
 ]

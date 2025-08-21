@@ -16,6 +16,9 @@
   { "name": "Abra", "number": 63, "type": ["Psychic"], "audio": "abra", "rarity": "Uncommon", "move": "Teleport" },
   { "name": "Kadabra", "number": 64, "type": ["Psychic"], "audio": "kadabra", "rarity": "Rare", "move": "Psybeam" },
   { "name": "Alakazam", "number": 65, "type": ["Psychic"], "audio": "alakazam", "rarity": "Epic", "move": "Kinesis" },
+  { "name": "Bellsprout", "number": 69, "type": ["Grass", "Poison"], "audio": "bellsprout", "rairty": "Common", "move": "Vine Whip" },
+  { "name": "Weepinbell", "number": 70, "type": ["Grass", "Poison"], "audio": "weepinbell", "rairty": "Uncommon", "move": "Razor Leaf" },
+  { "name": "Victreebel", "number": 71, "type": ["Grass", "Poison"], "audio": "victreebel", "rairty": "Rare", "move": "Leaf Blade" },
   { "name": "Gastly", "number": 92, "type": ["Ghost", "Poison"], "audio": "gastly", "rarity": "Uncommon", "move": "Lick" },
   { "name": "Haunter", "number": 93, "type": ["Ghost", "Poison"], "audio": "haunter", "rarity": "Rare", "move": "Shadow Ball" },
   { "name": "Gengar", "number": 94, "type": ["Ghost", "Poison"], "audio": "gengar", "rarity": "Epic", "move": "Destiny Bond" },
@@ -26,6 +29,9 @@
   { "name": "Magikarp", "number": 129, "type": ["Water"], "audio": "magikarp", "rarity": "Common", "move": "Splash" },
   { "name": "Gyarados", "number": 130, "type": ["Water", "Flying"], "audio": "gyarados", "rarity": "Epic", "move": "Hydro Pump" },
   { "name": "Aerodactyl", "number": 142, "type": ["Rock", "Flying"], "audio": "aerodactyl", "rarity": "Epic", "move": "Hyper Beam" },
+  { "name": "Dratini", "number": 147, "type": ["Dragon"], "audio": "dratini", "rarity": "Uncommon", "move": "Hyper Beam" },
+  { "name": "Dragonair", "number": 148, "type": ["Dragon"], "audio": "dragonair", "rarity": "Rare", "move": "Hyper Beam" },
+  { "name": "Dragonite", "number": 149, "type": ["Dragon", "Flying"], "audio": "dragonite", "rarity": "Epic", "move": "Hyper Beam" },
   { "name": "Mewtwo", "number": 150, "type": ["Psychic"], "audio": "mewtwo", "rarity": "Legendary", "move": "Psystrike" },
   { "name": "Mareep", "number": 179, "type": ["Electric"], "audio": "mareep", "rarity": "Common", "move": "Thunder Shock"},
   { "name": "Flaaffy", "number": 180, "type": ["Electric"], "audio": "flaaffy", "rarity": "Uncommon", "move": "Thunderbolt"},
@@ -141,6 +147,8 @@
   { "name": "Mega Salamence", "number": 10089, "type": ["Dragon", "Flying"], "audio": "salamence-mega", "rarity": "Legendary", "move": "Draco Meteor", "moveType": "Dragon" },
   { "name": "Mega Beedrill", "number": 10090, "type": ["Bug", "Poison"], "audio": "beedrill-mega", "rarity": "Legendary", "move": "Poison Jab", "moveType": "Poison" },
   { "name": "Diancie", "number": 719, "type": ["Rock", "Fairy"], "audio": "diancie", "rarity": "Mythical", "move": "Diamond Storm" },
-  { "name": "Mega Diancie", "number": 10075, "type": ["Rock", "Fairy"], "audio": "diancie-mega", "rarity": "Mythical", "move": "Diamond Storm", "moveType": "Rock" }
+  { "name": "Mega Diancie", "number": 10075, "type": ["Rock", "Fairy"], "audio": "diancie-mega", "rarity": "Mythical", "move": "Diamond Storm", "moveType": "Rock" },
+{ "name": "Mega Dragonite",  "type": ["Dragon", "Flying"], "audio": "dragonite", "rarity": "Legendary", "move": "Outrage", "moveType": "Dragon", "Unavailable": true, "imgPath": "a/a7/0149Dragonite-Mega_ZA"  },
+{ "name": "Mega Victreebel", "type": ["Grass", "Poison"], "audio": "victreebel", "rarity": "Legendary", "move": "Gastro Acid", "moveType": "Poison", "Unavailable": true, "imgPath": "f/f8/0071Victreebel-Mega_ZA" }
 
 ]
